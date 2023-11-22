@@ -4,7 +4,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs').promises; // Use fs.promises for async file operations
 
-server.use(cors());
+server.use(cors({ origin: '*' }));
+
 server.use(bodyParser.json());
 
 // Handle GET request to the home route
